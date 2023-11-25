@@ -80,10 +80,11 @@ export async function syncBeeminderData(
 
   await logMessage(`Posting to ${bmuser}/${slug}`, plugin);
   await axios.post(url, {
-    daystamp: makeDaystamp(),
-    value,
+    // daystamp: makeDaystamp(),
+    // value,
+    // requestid: countId,
+    value: 1,
     comment: 'via RemNote Beeminder plugin',
-    requestid: countId,
   });
 
   return true;
